@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: One row per customer with lifetime order/revenue metrics and a value segment.
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_value_segment
+        data_tests:
+          - accepted_values:
+              values: ['high_value', 'mid_value', 'low_value', 'no_purchases']
+
+  - name: dim_products
+    description: One row per product with lifetime units sold and revenue (completed orders only).
+    columns:
+      - name: product_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: fct_order_items
+    description: One row per order line item, the atomic grain for this mart, joined out to order and product attributes.
+    columns:
+      - name: order_item_id
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+
+  - name: agg_monthly_revenue
+    description: Monthly revenue, margin, and units sold by product category, for completed orders only.
+    columns:
+      - name: order_month
+        data_tests:
+          - not_null
+      - name: margin_pct
+        data_tests:
+          - not_null
