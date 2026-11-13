@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: Cleaned, one-row-per-customer staging model.
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+      - name: email
+        data_tests:
+          - not_null
+
+  - name: stg_products
+    description: Cleaned catalog with derived margin fields.
+    columns:
+      - name: product_id
+        data_tests:
+          - unique
+          - not_null
+      - name: margin_pct
+        data_tests:
+          - not_null
+
+  - name: stg_orders
+    description: Cleaned, one-row-per-order staging model.
+    columns:
+      - name: order_id
+        data_tests:
+          - unique
+          - not_null
+      - name: status
+        data_tests:
+          - accepted_values:
+              values: ['completed', 'refunded', 'cancelled']
+
+  - name: stg_order_items
+    description: Cleaned, one-row-per-line-item staging model.
+    columns:
+      - name: order_item_id
+        data_tests:
+          - unique
+          - not_null
+      - name: line_item_revenue
+        data_tests:
+          - not_null
