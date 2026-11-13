@@ -1,0 +1,26 @@
+product_id,product_name,category,unit_cost,unit_price,is_active
+1,Trail Backpack,Outdoor,40.01,127.17,1
+2,Insulated Water Bottle,Outdoor,58.37,122.92,1
+3,Camp Lantern,Outdoor,30.26,78.99,1
+4,Rain Shell Jacket,Outdoor,37.12,80.29,0
+5,Trekking Poles,Outdoor,29.86,49.57,1
+6,Ceramic Mug Set,Home,20.08,52.84,1
+7,Linen Throw Blanket,Home,9.06,23.11,1
+8,Cast Iron Skillet,Home,36.5,114.13,1
+9,Standing Desk Mat,Home,6.3,19.24,1
+10,Air Plant Holder,Home,14.54,37.34,1
+11,Adjustable Dumbbell Set,Fitness,57.63,133.75,1
+12,Yoga Mat,Fitness,50.89,161.41,1
+13,Resistance Band Kit,Fitness,40.18,66.8,1
+14,Foam Roller,Fitness,59.5,145.09,1
+15,Jump Rope,Fitness,24.38,74.81,1
+16,Wireless Earbuds,Electronics,47.37,127.25,0
+17,USB-C Charging Hub,Electronics,39.33,83.99,1
+18,Mechanical Keyboard,Electronics,35.25,78.2,1
+19,Portable SSD 1TB,Electronics,51.69,162.46,1
+20,Smart Plug 2-Pack,Electronics,12.42,21.49,1
+21,Ergonomic Chair Cushion,Office,55.34,116.01,1
+22,Monitor Stand,Office,41.08,74.2,1
+23,Notebook 3-Pack,Office,8.74,21.8,1
+24,Desk Organizer,Office,22.39,40.4,1
+25,Fountain Pen,Office,57.04,182.27,1
